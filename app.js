@@ -2,10 +2,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const cors = require('cors')
+const cors = require('cors');
+require('./models/connection');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+var tripsRouter = require('./routes/trip')
 
 
 var app = express();
@@ -19,7 +20,7 @@ app.use(cors());
 
 
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+app.use('/trip', tripsRouter)
 
 module.exports = app;
