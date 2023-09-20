@@ -4,7 +4,7 @@ const tripSchema = mongoose.Schema({
  
 departure: String,
 price: Number,
-Date: Date,
+date: String,
 arrival: String
 
 });
