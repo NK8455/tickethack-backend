@@ -131,6 +131,17 @@ router.post("/booking", (req, res) => {
   });
 
 
+  router.delete("/deleteallcart", (req, res) => {
+    cartTrip.deleteMany({}).then(
+      (data) => {
+        console.log(data)
+        res.json(data);
+      }
+    );
+  });
+
+
+
   
 
 
